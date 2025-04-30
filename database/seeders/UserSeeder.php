@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\User;
+use Illuminate\Support\Facades\Validator;
 
 class UserSeeder extends Seeder
 {
@@ -51,7 +52,7 @@ class UserSeeder extends Seeder
             User::create([
                 'nama' => $d['nama'],
                 'email' => $d['email'],
-                'password' => $d['password'],
+                'password' => bcrypt($d['password']),
                 'alamat' => $d['alamat'],
                 'no_hp' => $d['no_hp'],
                 'role' => $d['role']

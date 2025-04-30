@@ -23,8 +23,9 @@ class User extends Authenticatable
         'email',
         'password',
         'no_hp',
+        'alamat',
         'role',
-        'alamat'
+
     ];
 
     // relasi ke periksa sebagai pasien
@@ -61,4 +62,14 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    // protected static function booted()
+    // {
+    //     static::creating(function ($user) {
+    //         if (!$user->role) {
+    //             $user->role = 'pasien'; // Default role untuk pasien
+    //         }
+    //     });
+    // }
+
 }

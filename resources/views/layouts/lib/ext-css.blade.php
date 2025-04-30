@@ -127,6 +127,15 @@
     .card-tools .input-group-append .btn-default:hover {
         background-color: #e2e8f0;
     }
+
+    body .text-primary {
+        color: #198754 !important;
+    }
+
+    body .text-primary:hover {
+        color: #157347 !important;
+        text-decoration: none;
+    }
 </style>
 
 <style>
@@ -194,5 +203,34 @@
 
     .nav-icon {
         margin-right: 0.5rem !important;
+    }
+</style>
+
+<style>
+    .selected-obats {
+        margin-top: 10px;
+        display: none;
+    }
+
+    .selected-obats .list-group-item {
+        padding: 0.5rem 1rem;
+        margin-bottom: 5px;
+        background-color: #f8f9fa;
+        border: 1px solid #e9ecef;
+        border-radius: 6px;
+    }
+
+    .selected-obats .btn {
+        padding: 0;
+        margin-left: 10px;
+        background: transparent;
+        border: none;
+        color: #dc3545;
+        transition: all 0.2s ease;
+    }
+
+    .selected-obats .btn:hover {
+        color: #bd2130;
+        transform: scale(1.1);
     }
 </style>

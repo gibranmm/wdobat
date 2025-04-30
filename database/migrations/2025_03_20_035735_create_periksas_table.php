@@ -13,13 +13,14 @@ return new class extends Migration
     {
         Schema::create('periksas', function (Blueprint $table) {
             $table->id();
-            $table->foreignID('id_pasien')->constrained('users','id');
-            $table->foreignID('id_dokter')->constrained('users','id');
-            $table->datetime('tgl_periksa')->nullable;
-            $table->text('catatan');
-            $table->float('biaya_periksa');
+            $table->foreignId('id_pasien')->constrained('users')->onDelete('cascade');
+            $table->foreignId('id_dokter')->constrained('users')->onDelete('cascade');
+            $table->date('tgl_periksa')->nullable();
+            $table->integer('biaya_periksa')->nullable();
+            $table->integer('catatan')->nullable();
+            $table->string('status')->default('Belum Diperiksa');
             $table->timestamps();
-        });
+        });        
     }
 
     /**

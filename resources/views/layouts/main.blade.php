@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>WDObat</title>
+  <link rel="icon" href="https://img.icons8.com/?size=100&id=4359&format=png&color=198754">
 
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
@@ -67,9 +68,10 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="../../index3.html" class="brand-link">
-      <img src="{{url('/admin/dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-bold">WDObat</span>
+    <a href="../../index3.html" class="brand-link d-flex align-items-center">
+      <i class="fas fa-clinic-medical brand-image me-2 text-white "></i>
+      <!-- <img src="{{url('/admin/dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8"> -->
+      <span class="brand-text fw-bold fs-5">WDObat</span>
     </a>
 
     <!-- Sidebar -->
@@ -80,7 +82,7 @@
           <img src="{{url('/admin/dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">dr. Saint</a>
+          <a href="#" class="d-block">{{ Auth::user()->nama }}</a>
         </div>
       </div>
 

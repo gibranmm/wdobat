@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('nama');
             $table->string('alamat');
             $table->string('no_hp')->unique();
-            $table->string('role');
+            $table->string('role')->default('pasien');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
